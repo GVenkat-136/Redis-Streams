@@ -19,6 +19,27 @@ const redisConfig: any = {
 const client = new Redis(redisConfig);
 ```
 
+# Add  Stream data 
+XADD command is used to append a new entry to a Redis Stream data structure. Redis Streams are like a log data structure where each entry has a unique ID and is stored in the order it was added
+```
+    // Data for the entry
+    const data = {
+        sensor_id: 1001,
+        temperature: 25.5,
+        humidity: 60
+    };
+
+    // Using XADD to add the entry to the stream
+    client.xadd('mystream', '*', 'sensor', JSON.stringify(data))
+
+```
+In this example:
+
+<li> <b>mystream </b>b>is the name of the stream. </b>li> 
+<li> <b>* </b> indicates that Redis should auto-generate an ID for the new entry. </li> 
+<li> <b>sensor</b> is field.</li>
+<li> <b>Data</b> is corresponding value.</li>
+
  # Fetching Consumer Information:
 
 Information about existing consumers in the specified consumer group is fetched using the xinfo command with the <b>"CONSUMERS"</b> option.
@@ -49,7 +70,4 @@ for each recived Stream, extracts its content, acknowledges the message using <b
 ```
  await client.xack(StreamName, groupName, messageId);
 ```
-
-
-
 
