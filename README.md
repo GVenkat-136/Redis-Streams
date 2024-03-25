@@ -40,7 +40,7 @@ In this example:
 <li> <b>sensor</b> is field.</li>
 <li> <b>Data</b> is corresponding value.</li>
 
- # Fetching Consumer Information:
+# Fetching Consumer Information:
 
 Information about existing consumers in the specified consumer group is fetched using the xinfo command with the <b>"CONSUMERS"</b> option.
 ```
