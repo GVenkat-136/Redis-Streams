@@ -59,10 +59,10 @@ Upon receiving messages,
 ```
  await client.xreadgroup( "GROUP", GroupName, Consumer, "COUNT", 1,"BLOCK", "1000","STREAMS", StreamName,'>');
 ```
-<b>GROUP</b>: Specifies the consumer group name. </br>
-<b>consumername</b>: Specifies the consumer name.</br>
-<b>COUNT</b>: Specifies the maximum number of messages to return.</br>
-<b>BLOCK</b>: Specifies the timeout to wait for new messages.</br>
+<b>GROUP</b>: Specifies the consumer group name. <br>
+<b>consumername</b>: Specifies the consumer name.<br>
+<b>COUNT</b>: Specifies the maximum number of messages to return.<br>
+<b>BLOCK</b>: Specifies the timeout to wait for new messages.<br>
 
 # Acknowledgment for recived Streams
 for each recived Stream, extracts its content, acknowledges the message using <b>xack</b>, and logs the acknowledgment status along with the message content.
