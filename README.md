@@ -35,7 +35,7 @@ XADD command is used to append a new entry to a Redis Stream data structure. Red
 ```
 In this example:
 
-<li> <b>mystream </b>b>is the name of the stream. </b>li> 
+<li> <b>mystream </b>is the name of the stream. </li> 
 <li> <b>* </b> indicates that Redis should auto-generate an ID for the new entry. </li> 
 <li> <b>sensor</b> is field.</li>
 <li> <b>Data</b> is corresponding value.</li>
